@@ -1,0 +1,23 @@
+<%- include("./partials/header") %>
+<div class="conatiner viewPage">
+    <% if(dump.Response==='False'){ %> 
+        <h1>Movies Not Found</h1>
+    <% } else { %>
+        <h1>Result</h1>
+        <div class="row ">
+         <% dump['Search'].forEach(function(movie){ %>
+         <div class="card px-2 py-2"style="width: 20rem;margin-bottom: 10px;margin-left: 10px;margin-right: 10px;">
+               
+                    <img src="<%=movie.Poster%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=movie.Title%></h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+    <% } %>
+</div>
+
+<%- include("./partials/footer") %>
