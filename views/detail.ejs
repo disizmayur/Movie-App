@@ -1,0 +1,87 @@
+<%- include("./partials/header")%>
+
+  <head>
+    <style>
+      .container {
+        margin-left: 200px;
+      }
+      body{
+        background-color: #e9ecef;
+      }
+      .la {
+        margin-left: 350px;
+         margin-top: 100px;
+         
+      }
+      .list-group-item{
+        background-color: #e9ecef;
+      }
+      .con{
+        width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    margin-top: 60px;
+      }
+    h8{
+      font-size: 2.75vmin;
+    }
+    h1{
+      font-size: 6vmin;
+    }
+    h7{
+      font-size: 2.75vmin;
+    }
+    </style>
+  </head>
+
+ <div class="con">
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item"><img src="<%=data.Poster%>" alt="..." class="img-thumbnail"></li>
+    <li class="list-group-item">
+      <div class="" style="max-width: 400px;">
+          <div class="col-md-8" style="max-width:100%">
+              <h1 class="card-title" margin-bottom=0px>
+                <%=data.Title%>
+              </h1>
+              <h7 class="card-title"> <b>
+                  <%=data.Year%>
+                </b></h7> <br>
+              <h8 class="card-title"> <b>Released Date :</b>
+                <%=data.Released%>
+              </h8> <br>
+              <h8 class="card-title"> <b>RunTime :</b>
+                <%=data.Runtime%>
+              </h8> <br>
+              <h8 class="card-title"> <b>Genre :</b>
+                <%=data.Genre%>
+              </h8> <br>
+              <h8 class="card-title"> <b>Director :</b>
+                <%=data.Director%>
+              </h8> <br>
+              <h8 class="card-title"> <b>imdb Rating :</b>
+                <%=data.imdbRating%>
+              </h8> <br>
+              <h8 class="card-title"> <b>Awards :</b>
+                <%=data.Awards%>
+              </h8> <br>
+              <h8 class="card-title"> <b>Actors :</b>
+                <%=data.Actors%>
+              </h8> <br>
+              <br>
+              <p class="card-text">
+                <i><%=data.Plot%></i>
+              </p>
+              </div>
+          </div>
+        </div>
+      </div></li>
+  
+  </ul>
+ </div>
+ 
+
+
+
+
+  <%- include("./partials/footer")%>
